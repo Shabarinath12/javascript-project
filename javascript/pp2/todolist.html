@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <style>
+            ul{
+                border:2px solid;
+               
+            }
+            li{
+                margin:10px;
+            }
+        </style>
+       
+        <h1>My Todo List</h1>
+        <input type="text" id="task">
+        <button onclick =addtask()>Add task</button>
+        <ul id="tasklist">
+        </ul>
+        <script>
+             var students = [{
+                'firstname':'Shabarinath',
+                'lastname':'Reddy',
+                'age':22,
+                'gender':'male'
+            },
+            {
+                'firstname':'akhil',
+                'lastname':'gowda',
+                 'age':23,
+                'gender':'male'
+            },
+            {
+                'firstname':'megha',
+                'lastname':'naidu',
+                'age':21,
+                'gender':'female'
+            }
+            ]
+            function addtask(){
+                var task = document.getElementById("task").value;
+                var list = document.getElementById("tasklist");
+                var myli= document.createElement("li");
+                var delBtn = document.createElement("button");
+                delBtn.onclick = delTask;
+                delBtn.innerText ="Delete";
+                 myli.onclick = handleclick;
+                myli.innerHTML = task;
+                list.appendChild(myli);
+                myli.appendChild(delBtn)
+                task = "";
+            }
+            function handleclick(e){
+                if( e.target.style.textDecoration==""){
+                  e.target.style.textDecoration = "line-through";
+                } 
+                else{
+                    e.target.style.textDecoration="";
+                }
+            }
+            function delTask(e){
+                console.log(e)
+            }
+        </script>
+    </body>
+</html>

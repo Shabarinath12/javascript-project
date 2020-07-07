@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <input type="text" placeholder="name">
+        <button onclick="name()">Submit</button>
+        <script>
+            var students = [{
+                'firstname':'Shabarinath',
+                'lastname':'Reddy',
+                'age':22,
+                'gender':'male'
+            },
+            {
+                'firstname':'akhil',
+                'lastname':'gowda',
+                 'age':23,
+                'gender':'male'
+            },
+            {
+                'firstname':'megha',
+                'lastname':'naidu',
+                'age':21,
+                'gender':'female'
+            }
+            ]
+            students.filter((a)=>{
+             console.log(a.firstname);
+            })
+        </script>
+    </body>
+</html>

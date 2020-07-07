@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <style>
+        ul {
+            border: 2px solid;
+
+        }
+
+        li {
+            margin: 10px;
+            list-style-type: none;
+        }
+    </style>
+
+    <h1>My Todo List</h1>
+    <input type="text" id="task">
+    <button onclick=addtask()>Add task</button>
+    <ul id="tasklist">
+    </ul>
+    <script>
+        let array = [];
+        function addtask() {
+            var list = document.getElementById("tasklist");
+            var myli = document.createElement("li");
+            var delBtn = document.createElement("button");
+            var task = document.getElementById("task").value;
+            
+            if(task != ''){
+                array.push(task);
+                list.appendChild(myli);
+                for (i = 0; i < array.length; i++) {
+                myli.innerHTML = '<li>'+array[i]+'<button onClick="delTask(\'' + i + '\')" />Delete</button></li>'
+            }
+            document.getElementById("task").value = '';
+            }
+        
+        }
+        function delTask(index) {
+            var list = document.getElementById("tasklist");
+            var myli = document.createElement("li");
+            var delBtn = document.createElement("button");          
+            list.innerHTML ='';
+            array.splice(index,1)
+             list.appendChild(myli);
+            for (i = 0; i < array.length; i++) {
+                myli.innerHTML += '<li>'+array[i]+'<button onClick="delTask(\'' + i + '\')" />Delete</button></li>'
+            }
+        }
+        function renderHtml(){
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <script>
+    var students =  [
+     {
+                     'firstname':'praveen',
+                     'lastname' :'gubbala',
+                     'age':'36',
+                     'gender':'male',
+                     'city':'hyderbad'
+                    },
+                   {
+                     'firstname':'srikanth',
+                     'lastname' :'gubbala',
+                     'age':'32',
+                     'gender':'male',
+                     'city':'bengaluru'
+     },               
+                  {
+                     'firstname':'pradeep',
+                     'lastname' :'Reddy',
+                     'age':'21',
+                     'gender':'male',
+                     'city':'hyderbad'
+      },
+                   {
+                     'firstname':'mounika',
+                     'lastname' :'mudiraj',
+                     'age':'20',
+                     'gender':'female',
+                     'city':'nalgonda'
+      },
+                   {
+                     'firstname':'nikhil',
+                     'lastname' :'m',
+                     'age':'22',
+                     'gender':'male',
+                     'city':'guntur'
+      },
+                  {
+                     'firstname':'riya',
+                     'lastname' :'bhadouria',
+                     'age':'14',
+                     'gender':'female',
+                     'city':'indore' 
+      }
+      ]
+      for(var i=0;i<=5;i++){
+          console.log(students[i].firstname);
+      }
+      for(var i=0;i<=5;i++){
+          if(students[i].gender=='female')
+          console.log(students[i].firstname);
+      }
+      for(var i=0;i<=5;i++){
+          if(students[i].city=='hyderbad')
+          console.log(students[i].firstname);
+      } 
+      for(var i=0;i<=5;i++){
+          var x=prompt()
+           if(students[i].age==x)
+               console.log(students[i].firstname);
+      }
+    </script>
+</html>

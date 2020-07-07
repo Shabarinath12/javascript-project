@@ -1,0 +1,133 @@
+<!-- <html>
+    <input type="text" placeholder="name" id= "d1">
+    <button onclick="foo()" id="d2">submit</button>
+    <script>
+         var ar = ["shabri","pavan","karthik"];
+         console.log(ar)
+         function name(){
+            var task = document.getElementById("d1").value;
+            var ar =document.getElementById("d2");
+         }
+         console.log(ar)
+    </script>
+</html> -->
+<!-- <html>
+    <p id = "d1"></p>
+    <script>
+        var a =100;
+        var b  =100;
+        var x = a + b;
+        document.getElementById("d1").innerHTML = x;
+        console.log(x);
+    </script>
+</html> -->
+<!-- <------------------------------------------ project 1 ------------------------------------>
+<html>
+  <h2>To do list</h2>
+  <input type="text" id="task" />
+  <button type="button" onclick="todoList()">click me</button>
+  <ol id="name"></ol>
+  <script>
+    function todoList() {
+      var item = document.getElementById("task").value;
+      var text = document.createTextNode(item);
+      var newitem = document.createElement("li");
+      var delBtn = document.createElement("button");
+      delBtn.onclick = delTask;
+      delBtn.innerText = "Delete";
+      newitem.appendChild(text);
+      newitem.appendChild(delBtn);
+      document.getElementById("name").appendChild(newitem);
+    }
+    function delTask(e) {
+      e.target.parentElement.remove();
+    }
+  </script>
+</html>
+
+<!-- <---------------------------------------------------xx---------------------------------------->
+
+<!-- <-------------------------------------------project 2---------------------------------------------->
+<html>
+  <body onload="startTime()">
+    <div id="txt"></div>
+  </body>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+  </script>
+</html>
+
+<!-- <---------------------------------------------------xx------------------------------------------->
+
+<!-- <html>
+  <body>
+    <script>
+      var i;
+      var fib = [0,1]; // Initialize array!
+      for (i = 2; i <= 10; i++) {
+        // Next fibonacci number = previous + one before previous
+        // Translated to JavaScript:
+        fib[i] = fib[i - 2] + fib[i - 1];
+        console.log(fib[i]);
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- <---------------------------------------------------xx-----------------------------------------------> 
+
+<!-- <html>
+  <body>
+    <h1 id="b1"></h1>
+    <script>
+      var num1 = 10;
+      num1 +=5;
+      console.log(num1);
+      var age = prompt("what is ur age ?")
+      document.getElementById('b1').innerHTML = age;
+    </script>
+  </body>
+</html> -->
+ <!-- <---------------------------------------------------xx----------------------------------------> 
+
+<!-- <html>
+  <body>
+    <script>
+       function name(){
+       var b2 = prompt('what is ur name');
+       var result = 'hello ' + b2;
+       console.log(result);
+      }
+      name()
+    </script>
+  </body>
+</html> -->
+<!-- <---------------------------------------------------xx----------------------------------------> 
+<!-- <html>
+  <body>
+    <script>
+      var num = 5;
+      while (num < 10){
+        num += 1
+        console.log(num)
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- <---------------------------------------------------xx-------------------------------------------> 

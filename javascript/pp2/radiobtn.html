@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <input id = "d1" name = "grp1" type ="radio" value="username">username</input>
+        <input id = "d2" name = "grp1" type ="radio" value="password">password</input>
+        <button onclick="func()" id ="d3">click me</button>
+    </body>
+    <script>
+          function func()
+       {
+        var d1 =document.getElementById("d1");
+        var d2 =document.getElementById("d2");
+       
+
+            if(d1.checked==true)
+            alert("the selected element is"+d1.value);
+            else if(d2.checked==true)
+            alert("the selected element is"+d2.value);
+            else
+              alert ("the selected elemet does not exist ");
+        }
+    </script>
+</html>
